@@ -13,29 +13,36 @@ A small, public-safe Python PoC for an Upwork-style "Email HTML parsing & extrac
 - lxml
 - pytest
 
-## Setup
+## Run
+
+### A) Recommended (editable install)
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt -r requirements-dev.txt
 pip install -e .
-```
-
-## Run the CLI
-
-From the repository root:
-
-```bash
 python -m email_extractor.cli --input samples --output output/extracted.csv
 ```
+
+### B) Alternative (no install)
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt -r requirements-dev.txt
+PYTHONPATH=src python -m email_extractor.cli --input samples --output output/extracted.csv
+```
+
+Option B exists because the package source lives under `src/` and is not importable by default without installation.
 
 This prints a short summary and writes the CSV file.
 
 ## Run tests
 
 ```bash
-pytest
+source .venv/bin/activate
+pytest -q
 ```
 
 ## Output CSV format
