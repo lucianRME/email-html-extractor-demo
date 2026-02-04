@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/email_extractor/__init__.py
+src/email_extractor/cli.py
+src/email_extractor/extractor.py
+src/email_extractor/utils.py
+src/email_html_extractor_poc.egg-info/PKG-INFO
+src/email_html_extractor_poc.egg-info/SOURCES.txt
+src/email_html_extractor_poc.egg-info/dependency_links.txt
+src/email_html_extractor_poc.egg-info/top_level.txt
+tests/test_cli_smoke.py
+tests/test_extractor_links.py
+tests/test_extractor_pixels.py
